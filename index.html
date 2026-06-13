@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Martimas – Premium Ethiopian Luxury Fashion & Lifestyle. Clothing, Leather Bags, Jewellery, Home Decor." />
+    <title>Martimas | Luxury Ethiopian Fashion & Lifestyle</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ========== LOADER ========== -->
+    <div id="loader" class="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">M</div>
+            <div class="loader-brand">MARTIMAS</div>
+            <div class="loader-tagline">Addis Ababa, Ethiopia</div>
+            <div class="loader-bar">
+                <div class="loader-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CATEGORY MODAL OVERLAY ========== -->
+    <div id="cat-modal" class="cat-modal" role="dialog" aria-modal="true" aria-label="Category View">
+        <div class="cat-modal-close" id="cat-modal-close" aria-label="Close">✕</div>
+        <div class="cat-modal-content" id="cat-modal-content"></div>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header id="header" class="header">
+        <div class="header-inner">
+            <a href="#home" class="logo" aria-label="Martimas Home">
+                <span class="logo-m">M</span>
+                <span class="logo-text">ARTIMAS</span>
+            </a>
+            <div class="header-brand" aria-hidden="true">MARTIMAS</div>
+            <nav class="nav" id="nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+
+                    <!-- Clothing Dropdown -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#clothing" class="nav-link dropdown-trigger" aria-haspopup="true"
+                            aria-expanded="false">
+                            Clothing <span class="chevron">&#8964;</span>
+                        </a>
+                        <div class="dropdown">
+                            <div class="dropdown-inner">
+                                <a href="#" class="drop-card" data-category="womens-clothing">
+                                    <div class="drop-img"
+                                        style="background-image:url('https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=400&q=80')">
+                                    </div>
+                                    <span class="drop-label">Women's Clothing</span>
+                                </a>
+                                <a href="#" class="drop-card" data-category="mens-clothing">
+                                    <div class="drop-img"
+                                        style="background-image:url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=80')">
+                                    </div>
+                                    <span class="drop-label">Men's Clothing</span>
+                                </a>
+                                <a href="#" class="drop-card" data-category="handmade-clothing">
+                                    <div class="drop-img"
+                                        style="background-image:url('https://images.unsplash.com/photo-1594938298603-c8148c4b4e12?w=400&q=80')">
+                                    </div>
+                                    <span class="drop-label">Handmade Clothing</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Leather Bags Dropdown -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#bags" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                            Leather Bags <span class="chevron">&#8964;</span>
+                        </a>
+                        <div class="dropdown">
+                            <div class="dropdown-inner bags-grid">
+                                <div class="bags-col">
+                                    <p class="bags-col-title">Men's Bags</p>
+                                    <a href="#" class="drop-link" data-category="office-bags">Office Bags</a>
+                                    <a href="#" class="drop-link" data-category="travel-bags">Travel Bags</a>
+                                    <a href="#" class="drop-link" data-category="messenger-bags">Messenger Bags</a>
+                                    <a href="#" class="drop-link" data-category="wallets">Wallets</a>
+                                </div>
+                                <div class="bags-col">
+                                    <p class="bags-col-title">Women's Bags</p>
+                                    <a href="#" class="drop-link" data-category="handbags">Handbags</a>
+                                    <a href="#" class="drop-link" data-category="tote-bags">Tote Bags</a>
+                                    <a href="#" class="drop-link" data-category="crossbody-bags">Crossbody Bags</a>
+                                    <a href="#" class="drop-link" data-category="luxury-bags">Luxury Bags</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Jewellery Dropdown -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#jewellery" class="nav-link dropdown-trigger" aria-haspopup="true"
+                            aria-expanded="false">
+                            Jewellery <span class="chevron">&#8964;</span>
+                        </a>
+                        <div class="dropdown">
+                            <div class="dropdown-inner">
+                                <a href="#" class="drop-card" data-category="necklaces">
+                                    <div class="drop-img"
+                                        style="background-image:url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&q=80')">
+                                    </div>
+                                    <span class="drop-label">Statement Necklaces</span>
+                                </a>
+                                <a href="#" class="drop-card" data-category="rings">
+                                    <div class="drop-img"
+                                        style="background-image:url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&q=80')">
+                                    </div>
+                                    <span class="drop-label">Statement Rings</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a href="#home-decor" class="nav-link">Home Decor</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#login" class="nav-link nav-login">Login</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section id="home" class="hero">
+        <!-- Habeshan women background slideshow -->
+        <div class="hero-slides">
+            <div class="hero-slide active"
+                style="background-image:url('https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=1800&q=85')">
+            </div>
+            <div class="hero-slide"
+                style="background-image:url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1800&q=85')">
+            </div>
+            <div class="hero-slide"
+                style="background-image:url('https://images.unsplash.com/photo-1594938298603-c8148c4b4e12?w=1800&q=85')">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow fade-up">✦ &nbsp; Est. Addis Ababa, Ethiopia &nbsp; ✦</p>
+            <h1 class="hero-headline fade-up">Discover Timeless<br /><em>Ethiopian Elegance</em></h1>
+            <p class="hero-sub fade-up">Premium Clothing &nbsp;•&nbsp; Leather Bags &nbsp;•&nbsp; Jewellery
+                &nbsp;•&nbsp; Home Decor</p>
+            <div class="hero-actions fade-up">
+                <a href="#clothing" class="btn btn-gold">Shop Now</a>
+                <button class="btn btn-outline" id="explore-btn">Explore Collection</button>
+            </div>
+        </div>
+
+        <div class="hero-slide-dots" aria-hidden="true">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </div>
+
+        <div class="search-bar-wrap fade-up">
+            <div class="search-bar">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    aria-hidden="true">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="search" id="search-input" placeholder="Search clothing, bags, jewellery…"
+                    autocomplete="off" aria-label="Search products" />
+                <button class="search-btn" id="search-btn" aria-label="Search">Search</button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </section>
+
+    <!-- ========== MARQUEE ========== -->
+    <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track">
+            <span>PREMIUM QUALITY</span><span class="sep">✦</span>
+            <span>HANDCRAFTED LEATHER</span><span class="sep">✦</span>
+            <span>ETHIOPIAN HERITAGE</span><span class="sep">✦</span>
+            <span>LUXURY JEWELLERY</span><span class="sep">✦</span>
+            <span>ARTISAN DECOR</span><span class="sep">✦</span>
+            <span>ADDIS ABABA</span><span class="sep">✦</span>
+            <span>HABESHAN CRAFTSMANSHIP</span><span class="sep">✦</span>
+            <span>PREMIUM QUALITY</span><span class="sep">✦</span>
+            <span>HANDCRAFTED LEATHER</span><span class="sep">✦</span>
+            <span>ETHIOPIAN HERITAGE</span><span class="sep">✦</span>
+            <span>LUXURY JEWELLERY</span><span class="sep">✦</span>
+            <span>ARTISAN DECOR</span><span class="sep">✦</span>
+            <span>ADDIS ABABA</span><span class="sep">✦</span>
+            <span>HABESHAN CRAFTSMANSHIP</span><span class="sep">✦</span>
+        </div>
+    </div>
+
+    <!-- ========== CLOTHING SECTION ========== -->
+    <section id="clothing" class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eye">Our Collections</p>
+                <h2 class="section-title">Clothing</h2>
+                <p class="section-sub">Woven with tradition, tailored for the modern world.</p>
+            </div>
+            <div class="card-grid three-col">
+
+                <div class="product-card reveal" data-category="womens-clothing" role="button" tabindex="0">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=600&q=80"
+                            alt="Habeshan Women's Clothing – elegant Ethiopian dress" loading="lazy" />
+                        <div class="card-badge">New</div>
+                        <div class="card-hover-cta">View Collection</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Women's Clothing</h3>
+                        <p class="card-desc">Elegant Habeshan silhouettes — timeless netela, tilf, and modern Ethiopian
+                            cuts.</p>
+                        <span class="card-link">View Collection →</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" data-category="mens-clothing" role="button" tabindex="0">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80"
+                            alt="Ethiopian Men's Traditional Clothing" loading="lazy" />
+                        <div class="card-hover-cta">View Collection</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Men's Clothing</h3>
+                        <p class="card-desc">Refined Ethiopian cuts — from traditional gabi to modern luxury fits.</p>
+                        <span class="card-link">View Collection →</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" data-category="handmade-clothing" role="button" tabindex="0">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b4e12?w=600&q=80"
+                            alt="Handmade Ethiopian Clothing – artisan crafted" loading="lazy" />
+                        <div class="card-badge gold-badge">Handmade</div>
+                        <div class="card-hover-cta">View Collection</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Handmade Clothing</h3>
+                        <p class="card-desc">Each piece crafted by skilled Ethiopian artisans — no two alike.</p>
+                        <span class="card-link">View Collection →</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SPLIT BANNER — Ethiopian Textile Heritage ========== -->
+    <div class="split-banner">
+        <div class="split-img"
+            style="background-image:url('https://images.unsplash.com/photo-1583394838336-acd977736f90?w=900&q=80')">
+        </div>
+        <div class="split-text">
+            <p class="section-eye">Our Heritage</p>
+            <h2>Rooted in<br /><em>Ethiopian Craft</em></h2>
+            <p>Every thread tells a story. Martimas honours centuries of Ethiopian weaving, leatherwork, and
+                goldsmithing — brought into the modern luxury world.</p>
+            <a href="#about" class="btn btn-gold">Our Story</a>
+        </div>
+    </div>
+
+    <!-- ========== LEATHER BAGS SECTION ========== -->
+    <section id="bags" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eye">Premium Leather</p>
+                <h2 class="section-title">Leather Bags</h2>
+                <p class="section-sub">Full-grain Ethiopian leather. Built to last a lifetime.</p>
+            </div>
+            <div class="bags-top reveal">
+                <div class="bags-hero-img">
+                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900&q=80"
+                        alt="Premium Ethiopian Leather Bags" loading="lazy" />
+                    <div class="bags-hero-text">
+                        <h3>Crafted to Perfection</h3>
+                        <p>Every stitch a statement. Hand-selected Ethiopian hides.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bags-cats-grid">
+                <div class="bags-col-section">
+                    <h4 class="bags-cat-head">Men's Bags</h4>
+                    <div class="bags-cat-row">
+                        <div class="bags-cat-card reveal" data-category="office-bags" role="button" tabindex="0">
+                            <div class="bags-cat-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80"
+                                    alt="Office Bags" loading="lazy" />
+                            </div>
+                            <span>Office Bags</span>
+                        </div>
+                        <div class="bags-cat-card reveal" data-category="travel-bags" role="button" tabindex="0">
+                            <div class="bags-cat-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=400&q=80"
+                                    alt="Travel Bags" loading="lazy" />
+                            </div>
+                            <span>Travel Bags</span>
+                        </div>
+                        <div class="bags-cat-card reveal" data-category="messenger-bags" role="button" tabindex="0">
+                            <div class="bags-cat-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=80"
+                                    alt="Messenger Bags" loading="lazy" />
+                            </div>
+                            <span>Messenger Bags</span>
+                        </div>
+                        <div class="bags-cat-card reveal" data-category="wallets" role="button" tabindex="0">
+                            <div class="bags-cat-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=400&q=80"
+                                    alt="Wallets" loading="lazy" />
+                            </div>
+                            <span>Wallets</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bags-col-section">
+                    <h4 class="bags-cat-head">Women's Bags</h4>
+                    <div class="bags-cat-row">
+                        <div class="bags-cat-card reveal" data-category="handbags" role="button" tabindex="0">
+                            <div class="bags-cat-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&q=80"
+                                    alt="Handbags" loading="lazy" />
+                            </div>
+                            <span>Handbags</span>
+                        </div>
+                        <div class="bags-cat-card reveal" data-category="tote-bags" role="button" tabindex="0">
+                            <div class="bags-cat-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=400&q=80"
+                                    alt="Tote Bags" loading="lazy" />
+                            </div>
+                            <span>Tote Bags</span>
+                        </div>
+                        <div class="bags-cat-card reveal" data-category="crossbody-bags" role="button" tabindex="0">
+                            <div class="bags-cat-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&q=80"
+                                    alt="Crossbody Bags" loading="lazy" />
+                            </div>
+                            <span>Crossbody Bags</span>
+                        </div>
+                        <div class="bags-cat-card reveal" data-category="luxury-bags" role="button" tabindex="0">
+                            <div class="bags-cat-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=400&q=80"
+                                    alt="Luxury Bags" loading="lazy" />
+                            </div>
+                            <span>Luxury Bags</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== JEWELLERY SECTION ========== -->
+    <section id="jewellery" class="section jewellery-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eye">Fine Jewellery</p>
+                <h2 class="section-title">Jewellery</h2>
+                <p class="section-sub">Statement pieces rooted in Ethiopian gold-smithing heritage.</p>
+            </div>
+            <div class="card-grid two-col">
+
+                <div class="product-card jewel-card reveal" data-category="necklaces" role="button" tabindex="0">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=700&q=80"
+                            alt="Statement Necklaces – Ethiopian Gold" loading="lazy" />
+                        <div class="jewel-overlay"><span>Statement Necklaces</span></div>
+                        <div class="card-hover-cta">View Collection</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Statement Necklaces</h3>
+                        <p class="card-desc">Bold, handcrafted necklaces that speak before you do.</p>
+                        <span class="card-link">Explore →</span>
+                    </div>
+                </div>
+
+                <div class="product-card jewel-card reveal" data-category="rings" role="button" tabindex="0">
+                    <div class="card-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=700&q=80"
+                            alt="Statement Rings – Ethiopian Craftsmanship" loading="lazy" />
+                        <div class="jewel-overlay"><span>Statement Rings</span></div>
+                        <div class="card-hover-cta">View Collection</div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Statement Rings</h3>
+                        <p class="card-desc">Timeless rings, shaped by Ethiopian goldsmith tradition.</p>
+                        <span class="card-link">Explore →</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOME DECOR SECTION ========== -->
+    <section id="home-decor" class="section section-dark decor-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eye">Artisan Living</p>
+                <h2 class="section-title">Home Decor</h2>
+                <p class="section-sub">Bring the warmth of Ethiopian artistry into your space.</p>
+            </div>
+            <div class="decor-grid">
+                <div class="decor-card large reveal" data-category="decor-handmade" role="button" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=80"
+                        alt="Ethiopian Handmade Decorations" loading="lazy" />
+                    <div class="decor-label">Handmade Decorations</div>
+                    <div class="decor-hover">View</div>
+                </div>
+                <div class="decor-card reveal" data-category="decor-ethiopian" role="button" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80"
+                        alt="Ethiopian-Inspired Home Decor" loading="lazy" />
+                    <div class="decor-label">Ethiopian-Inspired</div>
+                    <div class="decor-hover">View</div>
+                </div>
+                <div class="decor-card reveal" data-category="decor-artistic" role="button" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80"
+                        alt="Artistic Home Accessories" loading="lazy" />
+                    <div class="decor-label">Artistic Accessories</div>
+                    <div class="decor-hover">View</div>
+                </div>
+                <div class="decor-card reveal" data-category="decor-modern" role="button" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"
+                        alt="Modern Luxury Decor" loading="lazy" />
+                    <div class="decor-label">Modern Luxury</div>
+                    <div class="decor-hover">View</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eye">Customer Stories</p>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            <div class="card-grid three-col">
+                <div class="testi-card reveal">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"Absolutely amazing quality and beautiful craftsmanship. Every detail of my
+                        leather bag is perfect — this is what luxury truly feels like."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar" style="background:linear-gradient(135deg,#D4AF37,#A88B1B)">S</div>
+                        <div><strong>Sara M.</strong><span>Addis Ababa, Ethiopia</span></div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"One of the best Ethiopian fashion brands I've ever experienced. The handmade
+                        Habeshan clothing collection is stunning — unique and deeply beautiful."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar" style="background:linear-gradient(135deg,#8B6914,#D4AF37)">Y</div>
+                        <div><strong>Yonas T.</strong><span>Nairobi, Kenya</span></div>
+                    </div>
+                </div>
+                <div class="testi-card reveal">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"Luxury quality with authentic handmade beauty. My statement necklace gets
+                        compliments everywhere. Martimas is truly world-class Ethiopian design."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar" style="background:linear-gradient(135deg,#D4AF37,#6B4F1A)">A</div>
+                        <div><strong>Amina H.</strong><span>Dubai, UAE</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT US ========== -->
+    <section id="about" class="section section-dark about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img reveal">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=700&q=80"
+                        alt="Habeshan Woman in Traditional Dress – Martimas Brand Story" loading="lazy" />
+                    <div class="about-img-frame"></div>
+                </div>
+                <div class="about-text reveal">
+                    <p class="section-eye">Our Story</p>
+                    <h2 class="section-title left">About Martimas</h2>
+                    <p>Martimas is a luxury Ethiopian fashion and lifestyle brand born from a deep love of our cultural
+                        heritage and an uncompromising pursuit of quality. From the highlands of Addis Ababa, Ethiopia,
+                        we bring handcrafted clothing, premium leather bags, statement jewellery, and artisan home decor
+                        to the world stage.</p>
+                    <p>Each piece is a testament to the skill of Ethiopian artisans — weavers, leather workers,
+                        goldsmiths, and decorators who pour generations of knowledge into every product we create.</p>
+                    <ul class="about-pillars">
+                        <li><span class="pillar-icon">✦</span> Authentic Ethiopian Craftsmanship</li>
+                        <li><span class="pillar-icon">✦</span> Uncompromising Quality Standards</li>
+                        <li><span class="pillar-icon">✦</span> Modern Luxury Aesthetic</li>
+                        <li><span class="pillar-icon">✦</span> Sustainable & Ethical Production</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-gold">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eye">Reach Us</p>
+                <h2 class="section-title">Contact</h2>
+                <p class="section-sub">We'd love to hear from you.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-item">
+                        <div class="ci-icon">✉</div>
+                        <div>
+                            <p class="ci-label">Email Us</p>
+                            <a href="mailto:levelupwithmarti@gmail.com" class="ci-value">levelupwithmarti@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="ci-icon">📍</div>
+                        <div>
+                            <p class="ci-label">Location</p>
+                            <p class="ci-value">Addis Ababa, Ethiopia</p>
+                        </div>
+                    </div>
+                    <!-- Follow Us Social -->
+                    <div class="contact-social">
+                        <p class="ci-label" style="margin-bottom:1rem">Follow Us</p>
+                        <div class="social-icons">
+                            <a href="https://www.tiktok.com/@levelupwithmarti" target="_blank" rel="noopener"
+                                class="social-link tiktok-link" aria-label="TikTok – @levelupwithmarti">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.79a8.18 8.18 0 0 0 4.78 1.52V6.88a4.86 4.86 0 0 1-1.01-.19z" />
+                                </svg>
+                                <span>TikTok</span>
+                                <small>@levelupwithmarti</small>
+                            </a>
+                            <a href="https://www.instagram.com/levelupwithmarti" target="_blank" rel="noopener"
+                                class="social-link insta-link" aria-label="Instagram – @levelupwithmarti">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    aria-hidden="true">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <circle cx="12" cy="12" r="4" />
+                                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                                </svg>
+                                <span>Instagram</span>
+                                <small>@levelupwithmarti</small>
+                            </a>
+                            <a href="https://www.facebook.com/levelupwithmarti" target="_blank" rel="noopener"
+                                class="social-link fb-link" aria-label="Facebook – Martimas">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                                <span>Facebook</span>
+                                <small>@levelupwithmarti</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal" id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="cf-name">Full Name</label>
+                        <input type="text" id="cf-name" name="name" placeholder="Your name" required
+                            autocomplete="name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Email Address</label>
+                        <input type="email" id="cf-email" name="email" placeholder="your@email.com" required
+                            autocomplete="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" name="message" rows="5" placeholder="Tell us how we can help…"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold full-width">Send Message</button>
+                    <p class="form-status" id="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOGIN ========== -->
+    <section id="login" class="section login-section">
+        <div class="login-bg"
+            style="background-image:url('https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=1200&q=80')">
+        </div>
+        <div class="login-bg-overlay"></div>
+        <div class="container" style="position:relative;z-index:2">
+            <div class="login-card reveal">
+                <div class="login-header">
+                    <div class="login-logo">M</div>
+                    <h2>Welcome Back</h2>
+                    <p>Sign in to your Martimas account</p>
+                </div>
+                <form class="login-form" id="login-form" novalidate>
+                    <div class="form-group">
+                        <label for="l-email">Email Address</label>
+                        <input type="email" id="l-email" name="email" placeholder="your@email.com" required
+                            autocomplete="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="l-password">Password</label>
+                        <div class="pass-wrap">
+                            <input type="password" id="l-password" name="password" placeholder="••••••••" required
+                                autocomplete="current-password" />
+                            <button type="button" class="toggle-pass" id="toggle-pass" aria-label="Show password">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="login-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="remember" name="remember" /><span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-gold full-width">Login</button>
+                </form>
+                <p class="login-footer-text">Don't have an account? <a href="#">Create one</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><span class="logo-m">M</span><span class="logo-text">ARTIMAS</span></div>
+                    <p class="footer-tagline">Luxury Ethiopian Fashion & Lifestyle.<br />Handcrafted with heritage, worn
+                        with pride.<br /><span style="color:var(--gold);font-size:0.78rem">📍 Addis Ababa,
+                            Ethiopia</span></p>
+                    <div class="footer-social">
+                        <a href="https://www.tiktok.com/@levelupwithmarti" target="_blank" rel="noopener"
+                            class="fsocial-link" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.79a8.18 8.18 0 0 0 4.78 1.52V6.88a4.86 4.86 0 0 1-1.01-.19z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/levelupwithmarti" target="_blank" rel="noopener"
+                            class="fsocial-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/levelupwithmarti" target="_blank" rel="noopener"
+                            class="fsocial-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#login">My Account</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Categories</h4>
+                    <a href="#clothing">Clothing</a>
+                    <a href="#bags">Leather Bags</a>
+                    <a href="#jewellery">Jewellery</a>
+                    <a href="#home-decor">Home Decor</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Contact</h4>
+                    <a href="mailto:levelupwithmarti@gmail.com">levelupwithmarti@gmail.com</a>
+                    <p>Addis Ababa, Ethiopia</p>
+                    <a href="https://www.tiktok.com/@levelupwithmarti" target="_blank" rel="noopener">TikTok:
+                        @levelupwithmarti</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Martimas. All rights reserved. &nbsp;|&nbsp; Premium Ethiopian Luxury &nbsp;|&nbsp; Made with
+                    ♥ in Addis Ababa</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
